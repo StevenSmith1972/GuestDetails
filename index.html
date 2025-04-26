@@ -574,56 +574,7 @@ Sys.Application._enableHistoryInScriptManager();
 
                                 <div class="checkout-info-separator"></div>
 
-                                <div class="group">
-                                    <div class="left">
-                                        <span class="checkout-data-lbl-lg">Total price</span>
-                                    </div>
-                                    <div class="right">
-                                        <span data-bind="visible: showPrices">
-                                            <span data-bind="text: SearchRequest.TotalSymbol"></span><span class="totalPriceOnBooking" data-bind="text: getTotalCostFormatted">£67.45</span>
-                                        </span>
-                                        <span data-bind="invisible: showPrices" style="display: none;">
-                                            <span data-bind="text: SearchRequest.TotalSymbol"></span><span data-bind="text: getFullCostFormatted">£67.45</span>
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="group summary-payable-1024 voucher-hidden" hidden="">
-                                    <div class="left">
-                                        <span class="checkout-data-lbl-lg txt_green">Voucher discount</span>
-                                    </div>
-                                    <div class="right gc_info_track_elem txt_green">
-                                            <span data-bind="text: SearchRequest.TotalSymbol"></span><span data-bind="text: getVoucherAmount">0</span>
-                                    </div>
-                                </div>
-                                <div class="group summary-payable-1024 voucher-hidden" hidden="">
-                                    <div class="left">
-                                        <span class="checkout-data-lbl-lg">Total discounted price</span>
-                                    </div>
-                                    <div class="right gc_info_track_elem">
-                                            <span data-bind="text: SearchRequest.TotalSymbol"></span><span data-bind="text: getTotalCostMinusVoucher">£67.45</span>
-                                    </div>
-                                </div>
-
-                                <div class="checkout-info-separator"></div>
-
-                                <div class="group">
-                                    <div class="left">
-                                        <span class="checkout-data-lbl-lg">Payable today</span>
-                                    </div>
-                                    <div class="right checkout-data-lbl-lg">
-                                        <span data-bind="text: SearchRequest.TotalSymbol"></span><span data-bind="text: getTotalPrePayFormatted">£67.45</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="hide-1024">
-                    <span class="checkout-data-lbl mb5">Estimated taxes and fees</span>
-                    <div class="text-small" data-bind="text: getTaxesAndFeesTextSingle"></div>
-                </div>
+                                
                 
             </div>
 
@@ -1375,7 +1326,57 @@ Western Rewards member or join for FREE by ticking the box below.
         <button type="submit" class="button tertiary make-booking-btn">Book Now</button>
         <span class="instant-confirmation-text">You will get instant confirmation</span>
     </form>
-        <div class="sfFormCheckboxlist">
+        <div class="group">
+                                    <div class="left">
+                                        <span class="checkout-data-lbl-lg">Total price</span>
+                                    </div>
+                                    <div class="right">
+                                        <span data-bind="visible: showPrices">
+                                            <span data-bind="text: SearchRequest.TotalSymbol"></span><span class="totalPriceOnBooking" data-bind="text: getTotalCostFormatted">£67.45</span>
+                                        </span>
+                                        <span data-bind="invisible: showPrices" style="display: none;">
+                                            <span data-bind="text: SearchRequest.TotalSymbol"></span><span data-bind="text: getFullCostFormatted">£67.45</span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="group summary-payable-1024 voucher-hidden" hidden="">
+                                    <div class="left">
+                                        <span class="checkout-data-lbl-lg txt_green">Voucher discount</span>
+                                    </div>
+                                    <div class="right gc_info_track_elem txt_green">
+                                            <span data-bind="text: SearchRequest.TotalSymbol"></span><span data-bind="text: getVoucherAmount">0</span>
+                                    </div>
+                                </div>
+                                <div class="group summary-payable-1024 voucher-hidden" hidden="">
+                                    <div class="left">
+                                        <span class="checkout-data-lbl-lg">Total discounted price</span>
+                                    </div>
+                                    <div class="right gc_info_track_elem">
+                                            <span data-bind="text: SearchRequest.TotalSymbol"></span><span data-bind="text: getTotalCostMinusVoucher">£67.45</span>
+                                    </div>
+                                </div>
+
+                                <div class="checkout-info-separator"></div>
+
+                                <div class="group">
+                                    <div class="left">
+                                        <span class="checkout-data-lbl-lg">Payable today</span>
+                                    </div>
+                                    <div class="right checkout-data-lbl-lg">
+                                        <span data-bind="text: SearchRequest.TotalSymbol"></span><span data-bind="text: getTotalPrePayFormatted">£67.45</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="hide-1024">
+                    <span class="checkout-data-lbl mb5">Estimated taxes and fees</span>
+                    <div class="text-small" data-bind="text: getTaxesAndFeesTextSingle"></div>
+                </div>
+	    <div class="sfFormCheckboxlist">
             <div class="sfCheckListBox">
                 <input checked="checked" sessioncam-name="PaymentCheckoutSameAsBilling" type="checkbox" id="same_billing" data-bind="checked: SameBillingAddress, events:{ change: sameBillingAddressChange }">
                 
